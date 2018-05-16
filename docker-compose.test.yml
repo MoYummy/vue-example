@@ -1,0 +1,12 @@
+version: '2'
+services:
+  mocha-test:
+    container_name: mocha-test
+    build:
+      context: .
+      dockerfile: Dockerfile-test
+    volumes:
+      - .:/mocha-test
+      - /mocha-test/node_modules/
+    working_dir: /mocha-test
+    command: /bin/sh -c "npm run test:unit"

@@ -6,7 +6,7 @@ module.exports = {
   // sub-path here. For example, if your app is deployed at
   // https://www.foobar.com/my-app/
   // then change this to '/my-app/'
-  baseUrl: '/',
+  baseUrl: '/vue-example',
 
   // where to output built files
   outputDir: 'dist',
@@ -32,7 +32,9 @@ module.exports = {
   chainWebpack: () => {},
   configureWebpack: () => {
     if (process.env.NODE_ENV === 'production') {
+      // mutate config for production...
     } else {
+      // mutate for development...
     }
   },
 
@@ -71,7 +73,7 @@ module.exports = {
     hotOnly: false,
     // See https://github.com/vuejs/vue-cli/blob/dev/docs/cli-service.md#configuring-proxy
     proxy: null, // string | Object
-    before: app => {}
+    before: app => { console.assert(app) }
   },
 
   // options for 3rd party plugins

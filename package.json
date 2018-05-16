@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit --mode development"
   },
   "dependencies": {
     "vue": "^2.5.16"
@@ -13,7 +14,10 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.10",
     "@vue/cli-plugin-eslint": "^3.0.0-beta.10",
+    "@vue/cli-plugin-unit-mocha": "^3.0.0-beta.10",
     "@vue/cli-service": "^3.0.0-beta.10",
+    "@vue/test-utils": "^1.0.0-beta.16",
+    "chai": "^4.1.2",
     "vue-template-compiler": "^2.5.13"
   },
   "babel": {
